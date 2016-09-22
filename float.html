@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>probando float</title>
+    <style>
+      * {
+        border: 1px solid red;
+      }
+        /*body {
+          border: 2px solid black;
+        }*/
+
+        .box1 {
+          float: left;
+          /*width: 500px;*/
+          width: 30%;
+          /*height: 100px;*/
+          /*height: 20%;*/
+          /*height: auto;*/
+          padding: 20px;
+          /*margin: 1em;*/
+          border: 5px solid red;
+          /*box-sizing: border-box;*/
+        }
+        .box2 {
+          float: right;;
+          width: 200px;
+          /*height: 100px;*/
+          height: auto;
+          padding: 10px;
+          /*margin: 1em;*/
+          border: 5px solid red;
+          box-sizing: border-box;
+        }
+
+        .seccion {
+          border: 5px solid gray;
+          clear: both;
+        }
+
+        .parrafo { border: 5px solid green;}
+
+        .parrafoClear {
+          clear: left;
+          border: 5px solid green;
+        }
+
+        .nada {
+          margin: 0;
+          padding: 0;
+          border: 1px solid red;
+        }
+
+        .padin20 {
+          margin: 0;
+          padding: 20;
+          border: 1px solid red;
+        }
+
+        #bandera {
+          clear: both;
+        }
+        .zonaverde {
+          width: 30%;
+          height: 200px;
+          float: left;
+          border: 1px solid black;
+          background: green;
+          overflow: auto;
+        }
+
+        .zonablanca {
+          width: 30%;
+          height: 200px;
+          float: left;
+          border: 1px solid black;
+          background: white;
+          overflow: auto;
+        }
+
+        .zonaroja {
+          width: 30%;
+          height: 200px;
+          float: left;
+          border: 1px solid black;
+          background: red;
+          overflow: auto;
+        }
+        .tabla2 {width: 50%; border: 1px solid red;}
+        .tabla2 th {         border: 1px solid black;}
+        .tabla2 td {         border: 1px solid blue;}
+
+        .tabla3 { border-collapse: collapse; width: 60%; border: 1px solid red;}
+        .tabla3 th {         border: 2px solid black;}
+        .tabla3 td {         border: 2px solid blue;}
+
+        .tabla4 {width: 70%; border: 1px solid red; text-align: left;}
+        .tabla4 th {         border: 1px solid black;}
+        .tabla4 td {         border: 1px solid blue;}
+
+        .tabla5 { width: 80%; border: 1px solid red;
+                  text-align: left; border-spacing: 10px 20px;
+                }
+        .tabla5 th {         border: 1px solid black;}
+        .tabla5 td {         border: 1px solid blue;}
+
+        .tabla6 { border-collapse: collapse; width: 90%;
+                 border: 1px solid red; text-align: left;
+                 }
+        .tabla6 th {         border: 2px solid black; padding: 10px}
+        .tabla6 td {         border: 2px solid blue; padding: 10px}
+
+        .tabla7 { border-collapse: collapse; width: 100%;
+                 border: 1px solid red; text-align: left;
+                 }
+        .tabla7 th {         border: 2px solid black; padding: 5px}
+        .tabla7 td {         border: 2px solid blue; padding: 5px}
+
+        .tabla7 caption {
+          font-weight: bold;
+          font-family: sans-serif;
+          padding: 1em;
+        }
+
+        .tabla8 { margin: 5% 5%;
+                  border-collapse: collapse;
+                  width: 90%;
+                  border-radius: 5px;
+                  border: 2px solid black;
+                  box-shadow: 4px -4px 0 gray;
+                  text-align: left;}
+        .tabla8 tr:nth-child(even) {background: rgb(249, 204, 152)}
+        .tabla8 tr:nth-child(odd) {background: white}
+        .tabla8 th {background: black; color: white}
+
+        .coloreado {
+            background-color: turquoise;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            /*width: 100%;*/
+        }
+        .coloreado:hover {background-color: blue;}
+
+        div.exterior {
+          width: 100%;
+          /*margin: 0;*/
+          background: #000;
+          padding: 20px 0;
+          height: 500px;
+          color: yellow;
+          position: relative;
+          /*display: flex;*/
+          align-content: center;
+        }
+        div.interior {
+          width: 40%;
+          height: 30%;
+          text-align: center;
+          /*border: 10px solid aqua;*/
+          border-radius: 20px;
+          background: rgb(218, 72, 0);
+          margin: 20% auto;;
+          /*padding: 30px 0;*/
+          /*position: absolute;*/
+
+        }
+        div.botonzote:hover {
+          background: blue;
+        }
+        div.botonzote h1 {
+          color: white;
+          font-size: 4em;
+          /*text-align: center;*/
+          vertical-align: middle;
+        }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="box1">
+      <p>
+        CAJA 1. Estoy flotando a la izquierda!!!
+        <i>tengo <b>float left</b></i>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+    <section class="seccion">
+      <p class="parrafo">
+        <b>esta es una seccion que no tiene propiedad <i>float</i> así que contiene a la CAJA 1. </b><br><br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+        <br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
+    <br><hr><br>
+    <h2>Ejemplo2</h2>
+    <section class="seccion">
+      <div class="box2">
+        <p>
+          CAJA 2. Estoy flotando a la derecha!!! <br>
+          <i>tengo <b>float right</b></i>
+        </p>
+      </div>
+      <p class="parrafo">
+        <b>esta es una seccion que no tiene propiedad <i>float</i> así que contiene a la CAJA 2. </b><br><br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+        <br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
+    <br><hr><br>
+    <h2>Ejemplo 3</h2>
+    <section class="seccion">
+      <div class="box1">
+        <p>
+          CAJA 1. Estoy flotando a la izquierda!!!
+          <i>tengo <b>float left</b></i>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <p class="parrafoClear">
+        <b>esta es una seccion que no tiene propiedad <i>float</i></b><br>
+        Sin embargo, contiene un <b><i>clear: left</i> que evita que la caja 1 sea contenida</b><br><br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+        <br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
+    <br><hr><br>
+    <!--  -------------------------------------------------------------------------------->
+    <h2>Ejemplo 4</h2>
+    <section class="seccion">
+      <div class="box1">
+        <p>
+          CAJA 1. Estoy flotando a la izquierda!!!
+          <i>tengo <b>float left</b></i><br><br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div class="box2">
+        <p>
+          CAJA 2. Estoy flotando a la derecha!!! <br>
+          <i>tengo <b>float right</b></i>
+        </p>
+      </div>
+      <p class="parrafo">
+        <b>esta es una seccion que no tiene propiedad <i>float</i></b><br>
+      <b> como no tiene propiedad <i>clear</i>, contiene dos cajas flotantes, una a la izquierda y otra a la derecha</b><br><br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+        <br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
+    <br><hr><br>
+    <!--  --------------------------------------------------------------------->
+    <h2>Ejemplo 5</h2>
+    <section class="seccion">
+      <div class="box1">
+        <p>
+          CAJA 1. Estoy flotando a la izquierda!!!
+          <i>tengo <b>float left</b></i><br><br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div class="box2">
+        <p>
+          CAJA 2. Estoy flotando a la derecha!!! <br>
+          <i>tengo <b>float right</b></i>
+        </p>
+      </div>
+      <p class="parrafoClear">
+        <b>esta es una seccion que no tiene propiedad <i>float</i></b><br>
+      <b> PERO tiene propiedad <i>clear: left</i>, contiene dos cajas flotantes, una a la izquierda y otra a la derecha</b><br><br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+        <br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
+    <br><hr><br>
+    <h2>Ejemplo 6</h2>
+    <section class="seccion">
+      <div class="box1">
+        <p>
+          CAJA 1. Estoy flotando a la izquierda!!!
+          <i>tengo <b>float left</b></i><br><br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div class="box1">
+        <p>
+          CAJA 2. Estoy flotando a la izquierda!!! <br>
+          <i>tengo <b>float left</b></i>
+        </p>
+      </div>
+      <p class="parrafo">
+        <b>esta es una seccion que no tiene propiedad <i>float</i></b><br>
+      <b> y tampoco tiene propiedad <i>clear</i>, contiene dos cajas flotantes,
+        ambas con float a la <i>izquierda (left)</i><br>por tanto, aparecen
+        flotando en la parte superior alineándose a la izquierda</b><br><br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+        <br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
+    <br><hr><br>
+    <h2>Ejemplo 7</h2>
+    <section>
+      <p style="width:200; border:1px solid red; margin: 0; padding:0">
+        Este elemento solo tiene:
+        <ul style="width:200; border:1px solid red; margin: 0; padding:0">
+          <li>margin: 0</li>
+          <li>padding: 0</li>
+          <li>borde: 1p solid red</li>
+        </ul>
+      </p>
+      <p>
+        El siguiente elemento tiene:<br>
+        <ul>
+          <li>margin: 0</li>
+          <li>padding: 0</li>
+          <li>borde: 1p solid red</li>
+        </ul>
+      </p>
+      <p style="width:200; border:1px solid red; margin: 0; padding:0">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p>
+        El siguiente elemento tiene:<br>
+        <ul>
+          <li>margin: 20</li>
+          <li>padding: 0</li>
+          <li>borde: 1p solid red</li>
+        </ul>
+      </p>
+      <p style="width:200; border:1px solid red; margin: 20; padding:20">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <div class="nada">
+        <p class="nada">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+
+      <div class="padin20">
+        <p class="box1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </section>
+
+    <br><hr><br>
+    <section class="seccion">
+      <h2>Ejemplo 8 </h2>
+      <div id="bandera">
+        <div class="zonaverde"></div>
+        <div class="zonablanca"></div>
+        <div class="zonaroja"></div>
+      </div>
+    </section>
+
+    <br><hr><br>
+    <section class="seccion">
+      <h2>Ejemplo 9 </h2>
+      <p>
+        Botón default
+      </p>
+      <button type="button" name="button">Da click!</button>
+      <button type="button" name="button" style="  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+          -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);">
+          Da click!</button>
+</section>
+
+<br><hr><br>
+    <section class="seccion" style="background: rgb(168, 227, 247);">
+        <h2>Ejemplo 10 - Tablas </h2>
+        <p>
+            Esta tabla básica. Solo tiene border de 1 px y padding de 10px
+        </p>
+        <table style="width:80%;
+                      border: 1px solid red;
+                      padding: 10px">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+            <tr>
+                <td>Homero</td>
+                <td>Garcés</td>
+                <td>36</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+            </tr>
+        </table>
+        <p>
+            Esta tabla contiene borde de color para los <i>th</i> y los <i>td</i>
+        </p>
+        <table class="tabla2">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+            <tr>
+                <td>Homero</td>
+                <td>Garcés</td>
+                <td>36</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+            </tr>
+        </table>
+        <p>
+            En esta tabla los bordes internos colapsan con el externo, contiene borde de color
+            para los <i>th</i> y los <i>td</i> <br>
+            <mark>Por tanto, el borde exterior colapsa con los interiores, quedando
+              negro los <b>td</b> y de color <b>azul</b> los <b>td</b><small><i>(los bordes
+                tienen un ancho de 2px para distinguirse mejor)</i></small></mark>
+        </p>
+        <table class="tabla3">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+            <tr>
+                <td>Homero</td>
+                <td>Garcés</td>
+                <td>36</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+            </tr>
+        </table>
+        <p>
+            Aquí los encabezados de las columnas quedan alineados a la izquierda
+        </p>
+        <table class="tabla4">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+            <tr>
+                <td>Homero</td>
+                <td>Garcés</td>
+                <td>36</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+            </tr>
+        </table>
+
+        <p>
+            Aquí se de una espaciado mediante <i>border-spacing</i> de 10px horizontalmente
+            y de 20px verticalmente
+        </p>
+        <table class="tabla5">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+            <tr>
+                <td>Homero</td>
+                <td>Garcés</td>
+                <td>36</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+            </tr>
+        </table>
+        <h2>Celda que abarca dos columnas: <br><small>padding 10px, bordes colapsados</small></h2>
+
+        <table class="tabla6">
+          <tr>
+            <th>Nombre</th>
+            <th colspan="2">Teléfono</th>
+          </tr>
+          <tr>
+            <td>Homerrowsky</td>
+            <td>55577854</td>
+            <td>55577855</td>
+          </tr>
+        </table>
+
+        <h2>Celda que abarca dos filas:</h2>
+        <p>
+          Es un poco más rebuscada su codificación
+        </p>
+        <table class="tabla7">
+          <tr>
+            <th>Nombre:</th>
+            <td>Homerrowsky</td>
+          </tr>
+          <tr>
+            <th rowspan="2">Teléfono:</th>
+            <td>55577854</td>
+          </tr>
+          <tr>
+            <td>55577855</td>
+          </tr>
+        </table>
+
+        <hr><h3>Tabla con caption</h3>
+        <table class="tabla7">
+          <caption>Tabla # <i>n</i>. Soy un caption</caption>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Domicilio</th>
+        </tr>
+        <tr>
+          <td>Homeroowsky</td>
+          <td>Garciflor</td>
+          <td>Narvarte 219</td>
+        </tr>
+        </table>
+
+        <p>
+            Esta tabla estilo especial para las columanas y filas, dando un
+            aspecto de tipo "<i>cebra (stripped)</i>"
+        </p>
+        <table class="tabla8">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+            <tr>
+                <td>Homero</td>
+                <td>Garcés</td>
+                <td>36</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+            </tr>
+        </table>
+
+    </section>
+<br><hr><br>
+    <!-- <section class="seccion" style="background: rgb(168, 227, 247);"> -->
+        <h2>Ejemplo 11 - div's que cambian d color</h2>
+
+    <section class="seccion">
+      <p>Mouse over the div element below to change its background color:</p>
+
+      <div class="coloreado">Mouse Over Me</div>
+      <div class="coloreado" style="width:90%">90 %</div>
+      <div class="coloreado" style="width:80%">80 %</div>
+      <div class="coloreado" style="width:70%">70 %</div>
+    </section>
+
+    <!-- <br><hr><br> -->
+    <section style="padding:0;">
+      <div class="exterior">
+        soyy un div con width de 100%,<br> background negro,
+        <!-- <div class="">
+<br>
+        </div> -->
+        <div class="interior">
+          <h1>ENTRAR</h1>
+        </div>
+        <!-- <button type="button" name="button">botón</button> -->
+      </div>
+    </section>
+  </body>
+</html>
