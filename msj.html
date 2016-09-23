@@ -16,12 +16,14 @@
         background-size: cover;
       }
       h1.uno {
+        display: none;
         font-size: 200px;
         color: rgb(84, 39, 138);
         padding: 0;
         margin: 0;
       }
       h1.dos {
+        display: none;
         font-size: 100px;
         color: white;
         left: auto;
@@ -30,10 +32,18 @@
         /*position: */
       }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+          // $("#div1").fadeIn();
+          $("#primero").fadeIn("slow");
+          $("#segundo").fadeIn(5000);
+          });
+</script>
   </head>
   <body>
-    <h1 class="uno">Ohtli....</h1>
+    <h1 class="uno" id="primero">Ohtli....</h1>
     <h1></h1>
-    <h1 class="dos">I'm watching you..</h1>
+    <h1 class="dos" id="segundo">I'm watching you..</h1>
   </body>
 </html>
