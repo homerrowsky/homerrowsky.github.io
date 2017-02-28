@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mensaje a Ohtli</title>
+    <style media="screen">
+      /*html {
+        background-color: black;
+      }*/
+      /** {
+        border: 1px solid green;
+      }*/
+      body {
+        background-image: url(./images/cat.jpg);
+        /*background-repeat: no-repeat;*/
+        background-size: cover;
+      }
+      h1.uno {
+        display: none;
+        font-size: 200px;
+        color: rgb(84, 39, 138);
+        padding: 0;
+        margin: 0;
+      }
+      h1.dos {
+        display: none;
+        font-size: 100px;
+        color: white;
+        left: auto;
+        /*border: 10%;*/
+        text-shadow: 0px 0px 30px yellow;
+        /*position: */
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+          // $("#div1").fadeIn();
+          $("#primero").fadeIn(2000);
+          $("#segundo").delay(2000).fadeIn(5000);
+          });
+</script>
+  </head>
+  <body>
+    <h1 class="uno" id="primero">Hey tú....</h1>
+    <h1></h1>
+    <h1 class="dos" id="segundo">I'm watching you..</h1>
+  </body>
+</html>
