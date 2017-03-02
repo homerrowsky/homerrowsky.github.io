@@ -1,9 +1,8 @@
-Probando autenticacion con ssh via terminal
+Demo temporal del sitio de ICAP
 =====================
 
-Crear carpeta local nueva
-clonar el repositorio pero cambiando la url a:
++ Versión en HTML simple (sin css, js)
++ Edición de información del sitio
 
 git@github.com:homerrowsky/homerrowsky.github.io.git
 
-- item
